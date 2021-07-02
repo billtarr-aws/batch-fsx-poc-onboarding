@@ -11,17 +11,17 @@ Follow the instructions in the infrastucture project first.
 
 Update "tenant_batch.ts" with your images
 
-    aws ecr describe-repositories --query "repositories[?repositoryName=='cpu_app'].repositoryArn" --output text
+    aws ecr describe-repositories --query "repositories[?repositoryName=='cpu_app'].repositoryUri" --output text
 
-line 153 - Replace the image value
+line 36 - Replace the image value
 
     image: "123456789012.dkr.ecr.us-east-1.amazonaws.com/cpu_app:latest"
 
 and the GPU image as well
 
-    aws ecr describe-repositories --query "repositories[?repositoryName=='gpu_app'].repositoryArn" --output text
+    aws ecr describe-repositories --query "repositories[?repositoryName=='gpu_app'].repositoryUri" --output text
 
-line 219 - Replace the image value
+line 66 - Replace the image value
 
     image: "123456789012.dkr.ecr.us-east-1.amazonaws.com/gpu_app:latest"
 
