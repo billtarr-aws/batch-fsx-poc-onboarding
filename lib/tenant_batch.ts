@@ -33,7 +33,7 @@ class BatchTenantStack extends cdk.NestedStack {
           containerPath: this.mountPoint,
           sourceVolume: 'Lustre'
         }],
-        image: "167965810206.dkr.ecr.us-west-2.amazonaws.com/cpu_app:latest",
+        image: "123456789012.dkr.ecr.us-east-1.amazonaws.com/cpu_app:latest",
         vcpus: 1,
         memory: 2048
       },
@@ -63,7 +63,7 @@ class BatchTenantStack extends cdk.NestedStack {
           containerPath: this.mountPoint,
           sourceVolume: 'Lustre'
         }],
-        image: "167965810206.dkr.ecr.us-west-2.amazonaws.com/gpu_app:latest", // CUDA based image
+        image: "123456789012.dkr.ecr.us-east-1.amazonaws.com/gpu_app:latest", // CUDA based image
         vcpus: 1,
         memory: 2048
       },
